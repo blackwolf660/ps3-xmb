@@ -151,7 +151,7 @@ const App = () => {
 
     return (
         <div className="w-screen h-screen bg-gray-900 flex items-center justify-center relative overflow-hidden font-mono">
-            <div ref={mountRef} className="absolute inset-0 z-0" />
+            <div ref={mountRef} className="absolute inset-0 z-0 brightness-40" />
 
             <div className="relative z-10 w-full h-full flex flex-col">
                 <div className="flex-1 relative overflow-hidden">
@@ -180,8 +180,8 @@ const App = () => {
                                 >
                                     <IconComponent 
                                         className='drop-shadow-[0_0_10px_rgba(0,0,0,0.5)]'
-                                        color='#e6e6e6'
-                                        size={100}
+                                        color={`${isFocused ? "#e8e8e8" : "#8f8f8f"}`}
+                                        size={80}
                                     />
                                     <span className={`text-white font-semibold transition-all duration-300 ${
                                         isSelected ? 'text-xl' : isFocused ? 'text-lg' : 'text-base'
